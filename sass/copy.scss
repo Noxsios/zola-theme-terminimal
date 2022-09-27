@@ -1,0 +1,26 @@
+pre {
+  position: relative;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  border-left: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 0px 0px 0px 8px;
+
+  & svg {
+    stroke: var(--accent-alpha-20);
+  }
+  &:hover svg {
+    stroke: var(--accent-alpha-70);
+  }
+
+  &.copied svg {
+    stroke: #78e2a0b3;
+  }
+}
