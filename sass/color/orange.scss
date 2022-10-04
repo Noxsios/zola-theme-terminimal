@@ -1,9 +1,11 @@
 :root {
-  --accent: rgb(255,168,106);
-  --accent-alpha-70: rgba(255,168,106,.7);
-  --accent-alpha-20: rgba(255,168,106,.2);
+  --accent: rgb(255, 168, 106);
+  --accent-alpha-70: rgba(255, 168, 106, 0.7);
+  --accent-alpha-20: rgba(255, 168, 106, 0.2);
+  --strong-color: rgba(255, 98, 102, 0.7);
+  --em-color: rgba(35, 176, 255, 0.7);
 
   --background: #222129;
   --color: white;
-  --border-color: rgba(255, 255, 255, .1);
+  --border-color: rgba(255, 255, 255, 0.1);
 }
