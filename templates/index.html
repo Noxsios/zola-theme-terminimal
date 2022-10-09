@@ -43,7 +43,14 @@
                 })
         }
 
-        ele.parentNode.prepend(cp)
+
+        const div = document.createElement("div")
+        div.style.position = "relative"
+        div.append(cp)
+        const pre = ele.parentElement
+
+        ele.parentNode.replaceWith(div)
+        div.append(pre)
     })
 </script>
 
