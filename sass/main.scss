@@ -85,7 +85,8 @@ p {
 }
 
 figure {
-  display: table;
+  display: flex;
+  flex-direction: column;
   max-width: 100%;
   margin: 25px 0;
 
