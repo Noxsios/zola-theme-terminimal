@@ -12,7 +12,12 @@
     {{ head_macros::head(config=config) }}
 
     {%- if config.generate_feed %}
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") | safe }}">
+        {%- if "rss" in config.feed_filename %}
+            {% set feed_type = 'rss+xml' %}
+        {%- else %}
+            {% set feed_type = 'atom+xml' %}
+        {% endif -%}
+        <link rel="alternate" type="application/{{ feed_type }}" title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
     {% endif -%}
 
     {%- if config.extra.favicon %}
@@ -61,8 +66,8 @@
     <header class="header">
         <div class="header__inner">
             <div class="header__logo">
-                {%- if config.logo_home_link %}
-                    {% set logo_link = config.logo_home_link %}
+                {%- if config.extra.logo_home_link %}
+                    {% set logo_link = config.extra.logo_home_link %}
                 {% else %}
                     {% set logo_link = config.base_url %}
                 {% endif -%}
